@@ -17,6 +17,7 @@ install:
   - travis_retry composer self-update
   - travis_retry composer install --no-interaction
   - php artisan key:generate
+  - chmod 777
   - php artisan migrate:fresh --seed
 
 before_script:
