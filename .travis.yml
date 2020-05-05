@@ -18,7 +18,7 @@ install:
   - travis_retry composer install --no-interaction
   - php artisan key:generate
   - php artisan migrate
-  - php artisan db:seed --class=UserSeeder
+  - php artisan db:seed --class=UsersSeeder
 
 before_script:
   - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost:8000 &
