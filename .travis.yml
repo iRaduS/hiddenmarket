@@ -1,4 +1,6 @@
 language: php
+sudo: required
+dist: trusty
 
 php:
   - 7.3
@@ -6,15 +8,25 @@ php:
 addons:
   chrome: stable
 
+services:
+  - mysql
+
 install:
   - cp .env.testing .env
-  - travis_retry composer install --no-interaction --prefer-dist --no-suggest
+  - mysql -e 'create database market_test;'
+  - travis_retry composer self-update
+  - travis_retry composer install --no-interaction
   - php artisan key:generate
-  - php artisan dusk:chrome-driver
+  - php artisan migrate:fresh --seed
 
 before_script:
   - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost:8000 &
   - php artisan serve &
 
 script:
+  - php artisan code:analyse --level=7
   - php artisan dusk
+  - vendor/bin/phpunit
+
+notifications:
+  email: false
