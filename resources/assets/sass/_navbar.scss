@@ -1,0 +1,42 @@
+#navbar-toggle-cbox:checked ~ .collapse {
+  display:block;
+}
+
+.navbar {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.navbar .nav-item .nav-link {
+  font-weight: 600;
+  color: #62646a;
+  font-size: 14px;
+  &:hover {
+    color: #74767a;
+  }
+}
+
+#navbar-toggle-cbox {
+   display: none;
+ }
+
+nav.navbar li.nav-item.active > a.nav-link{
+  color: $theme-color
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  color: $theme-color;
+  border-left: 4px solid $theme-color;
+  border-radius: 0;
+  background: rgba(0, 0, 0, 0.04);
+}
+
+.nav-pills {
+  background: white;
+  border: 1px solid #e4e5e7;
+}
+
+@media (max-width: 766px){
+  #navmenu {
+    display: none;
+  }
+}

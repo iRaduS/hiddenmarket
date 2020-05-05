@@ -1,0 +1,161 @@
+
+// Variables
+@import "variables";
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+// navbar mobile resize support without js
+@import "navbar";
+
+// slider import
+@import "slider";
+
+// vendor profile backgrounds import
+@import "profile_backgrounds";
+
+// vendor profile
+@import "profile";
+
+@import "auth";
+
+@import "marketplace";
+
+@import "pagination";
+// tooltip
+
+@import "tooltip";
+
+
+.category-breadcrumb .breadcrumb{
+  padding: 0.5rem;
+  font-size: 0.8rem;
+}
+
+.breadcrumb {
+  background-color: white;
+  border-radius: 0;
+  -webkit-box-shadow: 0px 0px 14px -2px rgba(222,222,222,1);
+  -moz-box-shadow: 0px 0px 14px -2px rgba(222,222,222,1);
+  box-shadow: 0px 0px 14px -2px rgba(222,222,222,1);
+}
+
+.category-breadcrumb .breadcrumb .breadcrumb-item + .breadcrumb-item::before{
+  content: ">";
+}
+
+table.product td{
+  padding: 0.4rem !important;
+}
+
+body { 
+  background: #F7F7F7;
+}
+
+.card, .nav-pills {
+  border-radius: 0;
+  border: 0;
+  -webkit-box-shadow: 0px 0px 14px -2px rgba(222,222,222,1);
+  -moz-box-shadow: 0px 0px 14px -2px rgba(222,222,222,1);
+  box-shadow: 0px 0px 14px -2px rgba(222,222,222,1);
+}
+
+.progress-bar {
+  background-color: $success;
+}
+
+.card-subtitle {
+  font-size: 15px;
+}
+
+.card-text {
+  font-size: 14px;
+}
+
+.card-header {
+  background: white;
+  text-align: center;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  font-weight: 600;
+  text-transform: uppercase;
+  color: $theme-color;
+}
+
+.card-footer {
+  border-top: 1px solid rgba(0,0,0,0.1);
+  background: white;
+  text-align: center;
+  padding: .5em;
+  font-size: 14px;
+}
+
+.btn-sm {
+  margin: 4px;
+}
+
+a {
+  color: #343a40
+}
+
+a:hover {
+  color: black;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.form-control, .input-group-text {
+  border: 1px solid #e4e4e4;
+  &:focus {
+    box-shadow: none;
+    border: 1px solid lightgrey;
+    box-shadow: inset 2px 2px 2px #f5f5f5;
+    color: #222325;
+  }
+}
+
+.form-control, .form-control-sm {
+  border-radius: 0;
+}
+
+.btn {
+  border-radius: 0;
+}
+
+.btn-outline-custom {
+  color: $theme-color;
+  font-weight: 600;
+  padding: 2px 8px;
+  border: 2px solid $theme-color;
+  border-radius: 2px;
+  font-size: 14px;
+  &:hover {
+    background: $theme-color;
+    color: white;
+  }
+}
+
+.list-group-item:last-child, .list-group-item:first-child {
+  border-radius: 0;
+}
+
+
+.list-group {
+  border-radius: 0;
+}
+
+.badge {
+  border-radius: 0;
+  padding: .4em;
+}
+
+::-moz-selection { /* Code for Firefox */
+  background: $theme-color;
+  color: white;
+}
+
+::selection {
+  background: $theme-color;
+  color: white;
+}

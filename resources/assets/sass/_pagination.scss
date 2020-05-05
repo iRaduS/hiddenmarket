@@ -1,0 +1,14 @@
+.page-link {
+
+    border-radius: 0;
+    color: $theme-color;
+    border: 0;
+    &:hover{
+        color: #6858d3;
+    }
+
+}
+
+.page-item.active .page-link {
+    background-color: $theme-color;
+}
